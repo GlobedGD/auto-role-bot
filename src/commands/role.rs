@@ -52,7 +52,7 @@ pub async fn remove(
 
     match state.remove_role(role.id.get() as i64).await {
         Ok(()) => {
-            ctx.reply(format!("S✅ uccessfully removed role <@&{}>.", role.id))
+            ctx.reply(format!("✅ Successfully removed role <@&{}>.", role.id))
                 .await?;
         }
         Err(RoleRemoveError::Database(e)) => {
